@@ -1,0 +1,50 @@
+/* css pour la carte  */
+#macart {
+  
+    height: 400px; /* Ajustez cette valeur selon vos besoins */
+  }
+  .intro-carte {
+    text-align: center; /* Centrer le texte */
+    background-color: #e0f7fa; /* Fond léger et coloré */
+    padding: 15px; /* Espacement intérieur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  .intro-carte h2 {
+    color: #458d45; /* Couleur du texte attrayante */
+    font-size: 2em; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    margin: 0; /* Pas de marges par défaut */
+  }
+  @media (max-width: 768px) {
+    .intro-carte h2 {
+        font-size: 1.5em; /* Réduire la taille sur mobile */
+    }
+  }
+  /* css pour intro  */
+  .introduction {
+    background: #4d4d4d ; /* Couleur de fond attrayante */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    border-radius: 0px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgb(0, 0, 0.2); /* Ombre portée */
+    animation: fadeIn 1.5s; /* Animation d'apparition */
+    margin-top: 56px;
+  }
+  /* Animation d'apparition */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  .introduction h1 {
+    font-size: 2em; /* Taille de police du titre */
+    margin: 0 0 10px; /* Marges autour du titre */
+  }
+  .introduction p {
+    font-size: 1.2em; /* Taille de police du paragraphe */
+  }

@@ -1,0 +1,162 @@
+/* css pour la page information  */
+#information {
+    margin-top: 100px;
+    height: 400px;
+  }
+  #activite {
+    margin-top: 200px;
+    height: auto;
+  }
+  .mes-inscriptions-container {
+    padding: 20px;
+  }
+  
+  #mes-inscriptions-container {
+    margin-top: 100px;
+    height: 400px;
+  }
+  
+  
+  .centre-image {
+    width: 100vw; /* Largeur complète de la fenêtre */
+    position: relative;
+    overflow: hidden;
+    margin: 0; /* Évite les marges résiduelles */
+  }
+  .centre-img {
+    width: 100vw; /* Largeur de la fenêtre */
+    height: 500px; /* Hauteur fixe pour l'effet visuel */
+    object-fit: cover; /* Pour s'ajuster bien dans le cadre */
+  }
+  /* Titre centré sur l'image */
+  .centre-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  /* Conteneur pour les informations */
+  .info-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  /* Bloc d'informations du centre */
+  .centre-info, .activite-info {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left:10px;
+    margin-right: 10px;
+  }
+  .centre-info:hover, .activite-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+ 
+  /* css page information centre*/
+.centre-image {
+    width: 100vw; /* Largeur complète de la fenêtre */
+    position: relative;
+    overflow: hidden;
+    margin: 0; /* Évite les marges résiduelles */
+  }
+  .centre-img {
+    width: 100vw; /* Largeur de la fenêtre */
+    height: 500px; /* Hauteur fixe pour l'effet visuel */
+    object-fit: cover; /* Pour s'ajuster bien dans le cadre */
+  }
+  /* Titre centré sur l'image */
+  .centre-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  /* Conteneur pour les informations */
+  .info-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  /* Bloc d'informations du centre */
+  .centre-info, .activite-info {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left:10px;
+    margin-right: 10px;
+  }
+  .centre-info:hover, .activite-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  /* Style pour les titres et les listes */
+  .centre-info p, .activite-info h2, .activite-info ul {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #333;
+  }
+  .activite-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .activite-info li {
+    background: #f9f9f9;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  /* Bouton d'inscription */
+  .inscription-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #458d45;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .inscription-btn:hover {
+    background-color: #184e02;
+  }
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+    }
+    .centre-info, .activite-info {
+        min-width: 100%;
+    }
+    .centre-title {
+        font-size: 2em;
+    }
+  }
+  

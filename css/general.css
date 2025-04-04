@@ -1,0 +1,86 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #eafde4;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*css du login et inscription au site */
+
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 80px auto;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #5cb85c;
+}
+
+.form-container input, .form-container select, .form-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px -15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button  {
+  background-color: #184e02;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #4cae4c;
+}
+
+.form-container .btninscription {
+  background-color: #4cae4c;
+}
+
+.form-container span {
+  position: relative;
+  float: left;
+  width: 90%;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+.psw {
+  position: relative;
+  width: inherit;
+  color: #184e02;
+  margin: auto;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+     color: blueviolet;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

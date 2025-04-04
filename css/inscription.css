@@ -1,0 +1,87 @@
+#inscription-body {
+  /* background-color: #e4f2fe;*/
+   margin-top: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   flex-direction: column;
+   padding: 20px; /* Prevents content from touching the edges on small screens */
+}
+
+#inscription-body form {
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 89px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 90%; /* Adjusts width for smaller screens */
+  padding: 30px;
+  margin: 50px auto;
+
+}
+/*.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 50px auto;
+}*/
+#inscription-body #form h2 {
+  color: #333;
+  font-size: 28px; /* Scales better on smaller screens */
+  margin-bottom: 5px;
+  text-align: center;
+}
+#inscription-body label {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 5px 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+#inscription-body input,
+#inscription-body select,
+#inscription-body button ,
+#inscription-body .inscription
+{
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#inscription-body  button,.inscription {
+  background-color: #184e02;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#inscription-body button:hover ,.inscription {
+  background-color: #184e02;
+}
+#inscription-body input {
+  color: #333;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  #inscription-body .request_message, form {
+      width: 60%; /* Slightly larger on tablets */
+  }
+
+  #inscription-body form h2 {
+      font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #inscription-body .request_message, form {
+      width: 40%; /* Larger screens */
+  }
+}
+

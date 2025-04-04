@@ -1,0 +1,79 @@
+/* css diapo */
+main {
+  width: 100%;
+  margin-top: 0px;
+  height: 100vh;
+}
+.diapo {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour profondeur */
+  background-color: #fff; /* Fond blanc */
+  height: 50vh; /* 50% de la hauteur de la fenêtre */
+  margin: 0; /* Pas de marge */
+  padding: 0; /* Pas de padding */
+}
+.elements {
+  display: flex;
+  transition: transform 0.5s ease; /* Transition fluide */
+  height: 100%; /* Assurer que le conteneur prend toute la hauteur */
+  margin: 0; /* Pas de marge */
+}
+.element {
+  flex: 0 0 auto; /* Ajuster la taille des éléments */
+  min-width: 100%; /* Les éléments prennent toute la largeur */
+  max-width: 100%; /* Assurer que les éléments ne débordent pas */
+  position: relative;
+}
+.element img {
+  width: 100%; /* Largeur de l'image */
+  height: 100%; /* Hauteur de l'image pour remplir l'espace */
+  object-fit: cover; /* Couvre tout l'espace, peut couper l'image */
+}
+.caption {
+  position: absolute;
+  bottom: 10px; /* Positionner au bas */
+  left: 50%;
+  transform: translateX(-50%); /* Centrer horizontalement */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  color: #d8cece; /* Couleur du texte */
+  padding: 10px 15px; /* Espacement ajusté */
+  border-radius: 5px; /* Coins arrondis pour la légende */
+
+}
+
+.caption a{
+  text-decoration: underline;
+}
+
+#nav-droite,
+#nav-gauche {
+  position: absolute;
+  top: 50%; /* Centrer verticalement */
+  transform: translateY(-50%);
+  font-size: 2.5em; /* Taille de police ajustée */
+  color: white;
+  cursor: pointer; /* Curseur en forme de main */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  border-radius: 50%; /* Flèches rondes */
+  padding: 5px; /* Espacement autour des flèches */
+}
+#nav-droite {
+  right: 10px; /* Position de la flèche droite */
+}
+#nav-gauche {
+  left: 10px; /* Position de la flèche gauche */
+}
+@media (max-width: 768px) {
+  .element {
+    min-width: 100%; /* Pleine largeur sur mobile */
+  }
+  #nav-droite,
+  #nav-gauche {
+    font-size: 2em; /* Réduire la taille des flèches sur mobile */
+  }
+}
+h2.text{
+  color: white;
+}

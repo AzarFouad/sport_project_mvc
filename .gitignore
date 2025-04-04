@@ -1,0 +1,43 @@
+# 📁 Fichiers système
+.DS_Store
+Thumbs.db
+
+# ⚙️ Dossier Git
+.git/
+
+# 🧠 Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# 🧹 Fichiers de log et cache
+*.log
+*.cache
+*.tmp
+
+# 🛠️ Dossier d'IDE
+.vscode/
+.idea/
+.vs/
+
+# 📦 Composer
+/vendor/
+
+# 📄 Dépendances front (si jamais tu utilises npm ou yarn)
+node_modules/
+public/build/
+dist/
+
+# 🏗️ Fichiers temporaires de build
+*.bak
+*.swp
+*.swo
+
+# 📂 Dossier de session/temporaire
+storage/
+tmp/
+cache/
+
+# 📸 Sauvegardes automatiques
+*.orig
+*.save

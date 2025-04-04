@@ -1,0 +1,102 @@
+
+#contact-body {
+   /* background-color: #e4f2fe;*/
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px; /* Prevents content from touching the edges on small screens */
+}
+
+.request_message {
+    max-width: 400px;
+    width: 90%; /* Adjusts for smaller screens */
+    text-transform: capitalize;
+    background-color: #fff;
+    text-align: center;
+    color: green;
+    font-size: 13px;
+    padding: 14px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    animation: anime 0.5s ease-out;
+}
+
+@keyframes anime {
+    from {
+        transform: translateY(-70px);
+    }
+}
+
+#contact-body form {
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 89px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 90%; /* Adjusts width for smaller screens */
+    padding: 20px;
+
+}
+
+#contact-body form h2 {
+    color: #333;
+    font-size: 28px; /* Scales better on smaller screens */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#contact-body label {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+#contact-body input, textarea {
+    padding: 8px;
+    resize: none;
+    outline: 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+#contact-body button {
+    background-color: #184e02;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+#contact-body button:hover {
+    transform: scale(1.02);
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    #contact-body .request_message, form {
+        width: 100%; /* Slightly larger on tablets */
+    }
+
+    #contact-body form h2 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #contact-body .request_message, form {
+        width: 100%; /* Larger screens */
+    }
+}
