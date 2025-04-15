@@ -41,3 +41,19 @@ function updatePassword($conn, $userId, $password) {
     $stmt->bind_param("si", $hashed_password, $userId);
     return $stmt->execute();
 }
+
+// Nouvelle fonction à ajouter dans user_model.php
+function checkEmailExists($conn, $email) {
+    $stmt = $conn->prepare("SELECT email FROM utilisateur WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    return $stmt->num_rows > 0;
+}
+
+// Nouvelle fonction à ajouter dans user_model.php
+function storePasswordResetToken($conn, $email, $token, $expiration) {
+    $stmt = $conn->prepare("UPDATE utilisateur SET reset_token = ?, reset_expires = ? WHERE email = ?");
+    $stmt->bind_param("sis", $token, $expiration, $email);
+    return $stmt->execute();
+}
