@@ -1,40 +1,32 @@
 <?php
-require_once '../models/user_model.php';
-require_once '../models/email_model.php';
-
 if (isset($_POST['email'])) {
-    // Validation de l'email
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    
-    if ($email === false) {
-        $_SESSION['error_message'] = "Format d'email invalide";
-    } else {
-        // Vérifier si l'email existe en utilisant la fonction du modèle
-        $userExists = checkEmailExists($conn, $email);
+    $email = $_POST['email'];
+
+    // Vérification si l'email existe dans la base de données
+    $sql = "SELECT email FROM utilisateur WHERE email = '{$email}'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Génération du token (SHA1 de l'email)
+        $token = sha1($email);
+        $expiration = time() + 86400; // Token valide pendant 24h
+
+        // Envoi du lien par email
+        $link = "http://sportzone.fouadalazar.fr/index.php?page=reset_password&token=$token&expiration=$expiration"; // Correction ici
+        $subject = '=?UTF-8?B?'.base64_encode('Réinitialisation de mot de passe').'?=';
+        $message = "Bonjour, \n\nCliquez sur le lien suivant pour réinitialiser votre mot de passe : $link\n\nCe lien expirera dans 24 heures.";
+        $headers = 'Content-Type: text/plain; charset=UTF-8' . "\r\n";
+        $headers .= 'From: info@fouadalazar.com' . "\r\n";
         
-        if ($userExists) {
-            // Générer un token sécurisé
-            $token = bin2hex(random_bytes(32));
-            $expiration = time() + 86400; // 24h
-            
-            // Stocker le token en base (via modèle)
-            if (storePasswordResetToken($conn, $email, $token, $expiration)) {
-                // Envoyer l'email (via fonction du modèle)
-                if (sendPasswordResetEmail($email, $token)) {
-                    $_SESSION['success_message'] = "Un email de réinitialisation a été envoyé";
-                    header("Location: index.php?page=login");
-                    exit();
-                } else {
-                    $_SESSION['error_message'] = "Erreur lors de l'envoi de l'email";
-                }
-            } else {
-                $_SESSION['error_message'] = "Erreur lors de la génération du token";
-            }
+        if (mail($email, $subject, $message, $headers)) {
+            echo "<script>alert('Un email a été envoyé avec un lien de réinitialisation. Ce lien expirera dans 24 heures'); window.location.href = 'index.php?page=index';</script>";
         } else {
-            $_SESSION['error_message'] = "Cet email n'est pas enregistré";
+            echo "<script>alert('Erreur lors de l\'envoi de l\'email.');</script>";
         }
+    } else {
+        echo "<script>alert('Cet email n\'existe pas.');</script>";
     }
 }
+require_once 'views/forgot_password.php';
+?>
 
-require_once '../views/forgot_password.php';
-$conn->close();

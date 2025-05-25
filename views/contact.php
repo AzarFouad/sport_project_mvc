@@ -1,4 +1,4 @@
- <div id="contact-body">
+<div id="contact-body">
     <?php 
     //afficher le message d'erreur
     if(isset($info)){?>
@@ -16,7 +16,7 @@
        }
     ?>
     <form class="contact_form" action="index.php?page=contact" method="POST">
-        <h2>Contact Us</h2>
+        <h2>Contactez nous</h2>
         <label>Nom</label>
         <input type="text" name="username" >
         <label>Email</label>
