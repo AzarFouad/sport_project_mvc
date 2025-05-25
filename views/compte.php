@@ -1,4 +1,4 @@
-<div id="inscription-body"> 
+ <div id="inscription-body"> 
      <form method="POST" id="inscriptionForm" action="index.php?page=compte">
             <h2>Profil  </h2>
              <!-- Affichage des informations utilisateur -->

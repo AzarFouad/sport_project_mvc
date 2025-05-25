@@ -1,4 +1,4 @@
-<div id="contact-body">
+ <div id="contact-body">
     <?php 
     //afficher le message d'erreur
     if(isset($info)){?>
